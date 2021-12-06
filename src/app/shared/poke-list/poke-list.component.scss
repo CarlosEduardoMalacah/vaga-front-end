@@ -1,0 +1,76 @@
+@import '../../../config-scss/rem-calc.scss';
+$padding: rem-calc(20);
+
+:host {
+  .listagem{
+  display: flex;
+  justify-content: space-between;
+  padding: $padding 0;
+  flex-wrap: wrap;
+
+
+  .pokemon{
+    position: relative;
+			display: flex;
+			background: rgb(212, 209, 209);
+
+			width: calc(49% - 2.5rem);
+			height: rem-calc(157 - 40);
+
+			margin-bottom: rem-calc(10);
+			padding: $padding;
+
+			border-radius: rem-calc(10);
+
+			text-decoration: none;
+			color: var(--primary-color);
+
+    &_status{
+
+      h2{
+        font-size: rem-calc(22);
+        font-weight: bold;
+        font-weight: 700;
+        margin-bottom: rem-calc(10);
+        text-transform: capitalize;
+      }
+      ul{
+        display: flex;
+        flex-direction: column;
+        }
+
+      li{
+        background: var(--red);
+      font-size: rem-calc(18);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: rem-calc(50);
+      width: rem-calc(65);
+      margin-bottom:  rem-calc(10);
+      color: var(--branco);
+      text-decoration: none;
+
+
+    }
+
+
+
+    }
+    &_image{
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: rem-calc(100);
+      width: rem-calc(110);
+      right: $padding;
+      bottom: $padding;
+      background: url('../../../assets/polygon2.png') no-repeat;
+      img{
+        width: rem-calc(80);
+      }
+  }
+}
+}
+}
